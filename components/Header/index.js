@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <div className="flex justify-between items-center py-4 mb-3 sticky top-0 z-50 bg-white ">
+    <div className="flex justify-between items-center py-4 mb-3 sticky top-0 z-50 bg-white mx-20">
       <div className="flex items-center gap-2 font-bold text-xl cursor-pointer">
         <Image src={"/images/opensea-logo.svg"} width={"48"} height={"48"} />
         OpenOcean

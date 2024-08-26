@@ -1,9 +1,16 @@
+"use client";
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
+  const router = useRouter();
   return (
     <div className="flex justify-between items-center py-4 mb-3 sticky top-0 z-50 bg-white mx-20">
-      <div className="flex items-center gap-2 font-bold text-xl cursor-pointer">
+      <div
+        className="flex items-center gap-2 font-bold text-xl cursor-pointer"
+        onClick={() => router.push("/")}
+      >
         <Image src={"/images/opensea-logo.svg"} width={"48"} height={"48"} />
         OpenOcean
       </div>

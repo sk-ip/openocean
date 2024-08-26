@@ -1,8 +1,16 @@
+"use client";
+
 import Image from "next/image";
 
+import { useRouter } from "next/navigation";
+
 export default function NftPreview({ src }) {
+  const router = useRouter();
   return (
-    <div className="relative">
+    <div
+      className="relative cursor-pointer"
+      onClick={() => router.push("/assets/ethereum/something")}
+    >
       <Image
         src={"/images/nft-images/" + src + ".avif"}
         fill

@@ -44,8 +44,8 @@ export default function NftPage() {
               Flip through and see Wojak portrayed in everything from modern
               life to cultural and historical settings. Good, evil, joyous,
               depressed, happy, seething... Anonthology is a spiritual journey
-              through the lens of one of internet culture's most famous icons.
-              Brought to you by the Wojak Coin team.
+              through the lens of one of internet culture&apos;s most famous
+              icons. Brought to you by the Wojak Coin team.
             </p>
           </div>
 

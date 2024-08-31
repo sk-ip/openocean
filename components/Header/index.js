@@ -3,15 +3,12 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-import {
-  WalletDisconnectButton,
-  WalletMultiButton,
-} from "@solana/wallet-adapter-react-ui";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 export default function Header() {
   const router = useRouter();
   return (
-    <div className="flex justify-between items-center py-4 mb-3 sticky top-0 z-50 bg-white">
+    <div className="flex justify-between items-center py-4 mb-3 sticky top-0 z-50 bg-white mx-20">
       <div
         className="flex items-center gap-2 font-bold text-xl cursor-pointer"
         onClick={() => router.push("/")}

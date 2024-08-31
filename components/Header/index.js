@@ -25,12 +25,6 @@ export default function Header() {
             backgroundColor: "rgb(59 130 246 / var(--tw-bg-opacity))",
           }}
         />
-        <WalletDisconnectButton
-          style={{
-            backgroundColor: "rgb(59 130 246 / var(--tw-bg-opacity))",
-            color: "white",
-          }}
-        />
         <div className=" bg-gray-100 p-2 rounded-lg cursor-pointer">
           <Image src={"/images/shopping-cart.svg"} width={"32"} height={"20"} />
         </div>

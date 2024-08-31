@@ -3,10 +3,15 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
+import {
+  WalletDisconnectButton,
+  WalletMultiButton,
+} from "@solana/wallet-adapter-react-ui";
+
 export default function Header() {
   const router = useRouter();
   return (
-    <div className="flex justify-between items-center py-4 mb-3 sticky top-0 z-50 bg-white mx-20">
+    <div className="flex justify-between items-center py-4 mb-3 sticky top-0 z-50 bg-white">
       <div
         className="flex items-center gap-2 font-bold text-xl cursor-pointer"
         onClick={() => router.push("/")}
@@ -15,13 +20,17 @@ export default function Header() {
         OpenOcean
       </div>
       <div className="flex gap-4">
-        <div className="flex items-center gap-3 bg-gray-100 p-2 rounded-lg cursor-pointer">
-          <Image src={"/images/wallet.svg"} width={"32"} height={"20"} />
-          <p className="text-base font-bold">Login</p>
-        </div>
-        <div className=" bg-gray-100 p-2 rounded-lg cursor-pointer ">
-          <Image src={"/images/user-circle.svg"} width={"32"} height={"20"} />
-        </div>
+        <WalletMultiButton
+          style={{
+            backgroundColor: "rgb(59 130 246 / var(--tw-bg-opacity))",
+          }}
+        />
+        <WalletDisconnectButton
+          style={{
+            backgroundColor: "rgb(59 130 246 / var(--tw-bg-opacity))",
+            color: "white",
+          }}
+        />
         <div className=" bg-gray-100 p-2 rounded-lg cursor-pointer">
           <Image src={"/images/shopping-cart.svg"} width={"32"} height={"20"} />
         </div>

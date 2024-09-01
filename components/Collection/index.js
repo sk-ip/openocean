@@ -1,33 +1,50 @@
+"use client";
+
 import Image from "next/image";
 import { TableRow } from "./TabelRow";
+import { useState } from "react";
 
 export default function Collection() {
+  const [category, setCategory] = useState("Trending");
+  const [timeOption, setTimeOption] = useState("24h");
+
+  const sortCategoryOptions = ["Trending", "Top"];
+  const sortTimeOptions = ["1h", "6h", "24h", "7d"];
+
   return (
     <div className="mt-12">
       <div className="flex justify-between">
         <div className="flex rounded-lg bg-gray-100 px-1 py-1 gap-2">
-          <p className="text-lg hover:bg-white px-3 py-2 rounded-lg cursor-pointer">
-            Trending
-          </p>
-          <p className="text-lg hover:bg-white px-3 py-2 rounded-lg cursor-pointer">
-            Top
-          </p>
+          {sortCategoryOptions.map((s) => (
+            <p
+              key={s}
+              className={
+                category === s
+                  ? "text-lg bg-white px-3 py-2 rounded-lg cursor-pointer"
+                  : "text-lg hover:bg-white px-3 py-2 rounded-lg cursor-pointer"
+              }
+              onClick={() => setCategory(s)}
+            >
+              {s}
+            </p>
+          ))}
         </div>
 
         <div className="flex gap-1">
           <div className="flex rounded-lg bg-gray-100 px-1 py-1 gap-2">
-            <p className="text-lg hover:bg-white px-5 py-2 rounded-lg cursor-pointer">
-              1h
-            </p>
-            <p className="text-lg hover:bg-white px-5 py-2 rounded-lg cursor-pointer">
-              6h
-            </p>
-            <p className="text-lg hover:bg-white px-5 py-2 rounded-lg cursor-pointer">
-              24h
-            </p>
-            <p className="text-lg hover:bg-white px-5 py-2 rounded-lg cursor-pointer">
-              7d
-            </p>
+            {sortTimeOptions.map((t) => (
+              <p
+                key={t}
+                className={
+                  timeOption === t
+                    ? "text-lg bg-white px-5 py-2 rounded-lg cursor-pointer"
+                    : "text-lg hover:bg-white px-5 py-2 rounded-lg cursor-pointer"
+                }
+                onClick={() => setTimeOption(t)}
+              >
+                {t}
+              </p>
+            ))}
           </div>
           <div className="flex rounded-lg bg-gray-100 px-6 py-3 items-center gap-2 cursor-pointer hover:bg-gray-200">
             <p className="text-lg ">All Chains</p>

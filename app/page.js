@@ -7,10 +7,10 @@ export default function Home() {
     <main className="mx-20">
       <Preview />
       <Collection />
-      <CollectionCards />
-      <CollectionCards />
-      <CollectionCards />
-      <CollectionCards />
+      <CollectionCards heading={"Notable Collections"} />
+      <CollectionCards heading={"Trending in Art"} />
+      <CollectionCards heading={"Trending in Gaming"} />
+      <CollectionCards heading={"Trending in Memberships"} />
     </main>
   );
 }

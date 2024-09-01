@@ -8,13 +8,13 @@ export default function NftPreview({ src }) {
   const router = useRouter();
   return (
     <div
-      className="relative cursor-pointer"
+      className="relative cursor-pointer overflow-hidden rounded-lg"
       onClick={() => router.push("/assets/ethereum/something")}
     >
       <Image
         src={"/images/nft-images/" + src + ".avif"}
         fill
-        className="rounded-lg"
+        className="rounded-lg hover:scale-110 transition ease-in-out delay-50"
       />
       <div className="absolute bottom-5 left-5 text-white">
         <div className="flex gap-2 ">

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function CollectionCard() {
   return (
-    <div className="shadow-lg cursor-pointer">
+    <div className="shadow-lg cursor-pointer hover:scale-105">
       <div className="relative h-52 w-full">
         <Image
           src={"/images/nft-images/collection-card-2.webp"}

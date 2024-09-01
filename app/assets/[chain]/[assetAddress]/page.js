@@ -1,3 +1,6 @@
+import NftDescription from "@/components/NftDescription";
+import NftImage from "@/components/NftImage";
+import NftPrice from "@/components/NftPrice";
 import Image from "next/image";
 
 export default function NftPage() {
@@ -5,126 +8,8 @@ export default function NftPage() {
     <div className="grid grid-cols-12 mx-20">
       {/* nft image view */}
       <div className="col-span-5">
-        <div className="h-lvh border rounded-lg ">
-          <div className="flex justify-between px-3 py-3 items-center">
-            <div>chain ethereum</div>
-            <div className="flex relative items-center gap-2">
-              <Image
-                src={"/images/arrow-top-right-on-square.svg"}
-                width={"20"}
-                height={"20"}
-              />
-              <p className="text-gray-400">42</p>
-              <Image src={"/images/heart.svg"} width={"20"} height={"20"} />
-            </div>
-          </div>
-
-          <div className="relative w-full h-2/3 my-20">
-            <Image src={"/images/nft-images/1.avif"} fill />
-          </div>
-        </div>
-
-        {/* nft description */}
-        <div className="flex flex-col border rounded-lg my-3">
-          <div className="flex gap-2 p-4 border rounded-t-lg">
-            <Image
-              src={"/images/bars3-bottom-left.svg"}
-              width={"20"}
-              height={"20"}
-            />
-            <p>Description</p>
-          </div>
-
-          <div className="flex flex-col gap-2 p-4 ">
-            <p className="text-lg text-gray-400">
-              By <span className="text-black">RadbroDeployer</span>
-            </p>
-            <p className="text-sm">
-              Anonthology is a tribute to Wojak, the immortal meme character.
-              Flip through and see Wojak portrayed in everything from modern
-              life to cultural and historical settings. Good, evil, joyous,
-              depressed, happy, seething... Anonthology is a spiritual journey
-              through the lens of one of internet culture&apos;s most famous
-              icons. Brought to you by the Wojak Coin team.
-            </p>
-          </div>
-
-          <div className="flex gap-2 p-4 border items-center justify-between">
-            <div className="flex gap-2">
-              <Image
-                src={"/images/bars3-bottom-left.svg"}
-                width={"20"}
-                height={"20"}
-              />
-              <p>Traits</p>
-            </div>
-            <Image
-              src={"/images/chevron-down.svg"}
-              height={"20"}
-              width={"20"}
-            />
-          </div>
-
-          <div className="grid grid-cols-3 p-4 gap-2">
-            <div className="flex flex-col items-center bg-gray-100 rounded-md p-2">
-              <p className="text-sm text-gray-500">CULTURAL</p>
-              <p className="text-base text-black font-semibold flex gap-2">
-                Day of the Dead <p className="text-gray-500">0.75%</p>
-              </p>
-              <p className="text-sm text-gray-500">Floor: 0.0275 ETH</p>
-            </div>
-            <div className="flex flex-col items-center bg-gray-100 rounded-md p-2">
-              <p className="text-sm text-gray-500">JAK</p>
-              <p className="text-base text-black font-semibold flex gap-2">
-                Cultural <p className="text-gray-500">18%</p>
-              </p>
-              <p className="text-sm text-gray-500">Floor: 0.0275 ETH</p>
-            </div>
-          </div>
-
-          <div className="flex gap-2 p-4 border items-center justify-between">
-            <div className="flex gap-2">
-              <Image
-                src={"/images/bars3-bottom-left.svg"}
-                width={"20"}
-                height={"20"}
-              />
-              <p>Details</p>
-            </div>
-            <Image
-              src={"/images/chevron-down.svg"}
-              height={"20"}
-              width={"20"}
-            />
-          </div>
-
-          <div className="flex flex-col gap-2 p-4 ">
-            <div className="flex items-center justify-between">
-              <p className="text-gray-600">Contract Address</p>
-              <p>0x0d58...795c</p>
-            </div>
-            <div className="flex items-center justify-between">
-              <p className="text-gray-600">Token ID</p>
-              <p>4714</p>
-            </div>
-            <div className="flex items-center justify-between">
-              <p className="text-gray-600">Token Standard</p>
-              <p>ERC-721</p>
-            </div>
-            <div className="flex items-center justify-between">
-              <p className="text-gray-600">Chain</p>
-              <p>Ethereum</p>
-            </div>
-            <div className="flex items-center justify-between">
-              <p className="text-gray-600">Last Updated</p>
-              <p>9 months ago</p>
-            </div>
-            <div className="flex items-center justify-between">
-              <p className="text-gray-600">Creator Earnings</p>
-              <p>1%</p>
-            </div>
-          </div>
-        </div>
+        <NftImage />
+        <NftDescription />
       </div>
 
       <div className="col-span-7 px-7">
@@ -185,57 +70,7 @@ export default function NftPage() {
         </div>
 
         {/* nft price */}
-        <div className="flex flex-col border rounded-lg p-4">
-          <p className="texe-base text-gray-400">Current price</p>
-          <div className="flex items-end gap-2 mt-2 mb-2">
-            <p className="text-4xl text-black font-bold ">0.0569 ETH</p>
-            <p className="text-base text-gray-500">$157.01</p>
-          </div>
-
-          {/* payment swap */}
-          <div className="flex flex-col">
-            <div className="flex flex-col border rounded-lg p-4">
-              <p className="text-base text-gray-500">Pay via</p>
-              <div className="flex justify-between items-center">
-                <div className="flex items-end gap-2 mt-2 mb-2">
-                  <p className="text-xl text-black ">0.0569 ETH</p>
-                </div>
-                <div className="bg-gray-100 py-2 px-3 rounded-full flex gap-2 my-2 hover:bg-gray-300 cursor-pointer">
-                  <Image
-                    src={"/images/blockchain/ethereum-icon.png"}
-                    width={"20"}
-                    height={"20"}
-                  />
-                  ETH
-                  <Image
-                    src={"/images/chevron-down.svg"}
-                    width={"20"}
-                    height={"20"}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* buttons */}
-          <div className="flex gap-2 items-center my-4">
-            {/* buy now */}
-            <div className="flex items-center justify-center flex-1 py-3 rounded-lg cursor-pointer bg-blue-500 hover:bg-blue-700 gap-2">
-              <p className="text-white">Buy now</p>
-              <Image
-                src={"/images/shopping-cart.svg"}
-                height={"20"}
-                width={"20"}
-              />
-            </div>
-
-            {/* make offer */}
-            <div className="flex items-center justify-center flex-1 py-3 rounded-lg cursor-pointer bg-gray-100 gap-2 hover:bg-gray-300">
-              <Image src={"/images/tag.svg"} height={"20"} width={"20"} />
-              <div>Make offer</div>
-            </div>
-          </div>
-        </div>
+        <NftPrice />
 
         {/* price history */}
         <div className="flex flex-col mt-4 rounded-lg">
